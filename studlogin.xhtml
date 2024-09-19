@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+<title>Student Login</title>
+<style>
+        body {
+        background: url('images/unievent.jpeg');
+            background-size: cover;
+        
+            background-color:grey;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color:white;
+        }
+
+        a {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        .card {
+          background-color:  rgba(70, 130, 180, 0.9);
+             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 40px auto;
+            padding: 20px;
+            width: 20%; 
+            height: auto; 
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h\\:form {
+            text-align: left;
+        }
+
+        .card h\\:panelGrid {
+            width: 100%;
+        }
+
+        .card h\\:panelGrid h\\:outputLabel,
+        .card h\\:panelGrid h\\:inputText,
+        .card h\\:panelGrid h\\:inputSecret,
+        .card h\\:panelGrid h\\:commandButton {
+            width: 95%; 
+            box-sizing: border-box;
+            font-size: 18px; 
+            padding: 10px; 
+        }
+
+        .card h\\:panelGrid h\\:message {
+            margin-left: 10px;
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+    </style>
+<h:outputStylesheet library="css" name="style.css"/>
+</h:head> 
+<body bgcolor="white"> 
+<h1 align="center"><u>Student Login</u></h1>
+<a href="index.jsf">Home</a>
+
+<div class="card">
+<center>
+<h:form>
+       <h:panelGrid columns="3" cellpadding="5">
+      
+<h:outputLabel for="mail" value="Enter Mail" />
+<h:inputText id="mail" validatorMessage="Mail is Mandatory" value="#{student1bean.mail}">
+<f:validateRequired/>
+</h:inputText>
+<h:message for="email" style="color:red"/>
+
+
+<h:outputLabel for="password" value="Enter Password" />
+<h:inputSecret id="password" validatorMessage="Password length must be in between 3 and 30" value="#{student1bean.password}">
+<f:validateLength minimum="3" maximum="30"/>
+</h:inputSecret>
+<h:message for="password" style="color:red"/>
+
+
+<h:outputLabel for="Login"/> 
+    <h:commandButton id="login" styleClass="button" value="Login" action="#{student1bean.validatelogin()}"/> 
+    <h:message for="login"/>
+
+
+</h:panelGrid>
+</h:form>
+</center>
+</div>
+</body> 
+</html>

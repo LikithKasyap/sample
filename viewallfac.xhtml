@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+<title>View all Faculty</title>
+<style>
+        body {
+        background: url('images/uni.jpeg');
+            background-size: cover;
+        
+        background-color: white; /* light beige */
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        h3 {
+            text-align: center;
+            color: white;
+        }
+        .dataTable {
+            background-color: rgba(255, 255, 255, 0.7); /* White with maximum transparency */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 40px auto;
+            padding: 20px;
+            width: 50%; 
+            height: auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .dataTable:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .dataTable h\\:form {
+            text-align: left;
+        }
+
+        .dataTable h\\:panelGrid {
+            width: 100%;
+        }
+
+        .dataTable h\\:panelGrid h\\:outputLabel,
+        .dataTable h\\:panelGrid h\\:inputText,
+        .dataTable h\\:panelGrid h\\:inputSecret,
+        .dataTable h\\:panelGrid h\\:commandButton {
+            width: 95%; 
+            box-sizing: border-box;
+            font-size: 18px; 
+            padding: 10px; 
+        }
+
+        .dataTable h\\:panelGrid h\\:message {
+            margin-left: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px; 
+            text-align: left;
+            width: 14%; 
+            height: 50px; 
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: black;
+        }
+    </style>
+</h:head> 
+<body bgcolor="lightgrey"> 
+<h3 align="center"><u>View all Faculty</u></h3>
+<a href="adminhome.jsp">Back to Home</a>
+
+<div class="dataTable">
+<center>
+<h:dataTable value="#{facultybean.flist}" var="facultybean" border="3">
+<h:column>
+<f:facet name="header">Id</f:facet>
+#{facultybean.id}
+</h:column>
+
+<h:column>
+<f:facet name="header">Name</f:facet>
+#{facultybean.name}
+</h:column>
+<h:column>
+<f:facet name="header">Gender</f:facet>
+#{facultybean.gender}
+</h:column>
+<h:column>
+<f:facet name="header">Department</f:facet>
+#{facultybean.department}
+</h:column>
+<h:column>
+<f:facet name="header">Salary</f:facet>
+#{facultybean.salary}
+</h:column>
+<h:column>
+<f:facet name="header">Email</f:facet>
+#{facultybean.email}
+</h:column>
+<h:column>
+<f:facet name="header">Contact</f:facet>
+#{facultybean.contact}
+</h:column>
+
+</h:dataTable>
+
+</center>
+</div>
+</body> 
+</html>
