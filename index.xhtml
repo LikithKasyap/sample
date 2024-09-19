@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+<title>University Event Management System</title>
+   <h:outputStylesheet library="css" name="style.css"/>
+
+<style>
+        body {
+        background: url('images/unievent.jpeg');
+            background-size: cover;
+        
+        background-color: white; /* light beige */
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        h3 {
+            text-align: center;
+            color: white;
+        }
+        .navbar {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(128, 128, 128, 0.2); /* grey with some transparency */
+    padding: 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px); /* apply a blur effect */
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* optional: adds a subtle shadow */
+}
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s;
+}
+
+
+        .content {
+            text-align: center;
+            color:white;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: white;
+        }
+        .content p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</h:head> 
+<body bgcolor="white"> 
+<h3 align='center' >UNIVERSITY EVENT MANAGEMENT SYSTEM</h3>
+<div class="navbar">
+<h:form>
+<h:commandLink action="index" value="Home" />&nbsp;&nbsp;&nbsp;
+<h:commandLink action="studreg" value="Student Registration" />&nbsp;&nbsp;&nbsp;
+<h:commandLink action="studlogin" value="Student Login" />&nbsp;&nbsp;&nbsp;
+<h:commandLink action="facultyreg" value="Faculty Registration" />&nbsp;&nbsp;&nbsp;
+<h:commandLink action="faclogin" value="Faculty Login" />&nbsp;&nbsp;&nbsp;
+<h:commandLink action="adminlogin" value="Admin Login" />&nbsp;&nbsp;&nbsp;
+
+</h:form>
+</div>
+<div class="conent">
+<p>Welcome to the University Event Management System. This platform allows students, faculty, and administrators to efficiently manage and participate in university events. Whether you're registering for events, tracking participation, or organizing activities, our system provides the tools you need to make event management easy and effective.</p>
+        <p>Explore the features by using the navigation links above. Register as a student or faculty member, log in to access your dashboard, or manage events as an administrator.</p>
+
+</div>
+        
+</body> 
+</html>
